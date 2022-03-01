@@ -69,20 +69,7 @@ services:
       net_pet:
         ipv4_address: 172.27.1.11
 
-  hue:
-      image: gethue/hue:20191107-135001
-      hostname: hue
-      container_name: hue
-      dns: 8.8.8.8
-      ports:
-      - "8888:8888"
-      volumes:
-        - ./hue-overrides.ini:/usr/share/hue/desktop/conf/z-hue.ini
-      depends_on:
-      - "database"
-      networks:
-        net_pet:
-          ipv4_address: 172.27.1.13
+
   
 
  
